@@ -1,0 +1,81 @@
+<div
+  class="container"
+  style="
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(240, 227, 227);
+  "
+>
+  <div class="row" style="width: inherit">
+    <div>
+      <mat-card class="example-card">
+        <img
+          mat-card-md-image
+          src="../../../assets/download1.png"
+          style="margin-left: 5px; border-radius: 2px"
+        />
+        <mat-card-title style="margin: 5px">All product</mat-card-title>
+      </mat-card>
+    </div>
+
+    <div style="float: left">
+      <mat-card class="example-card">
+        <img
+          mat-card-md-image
+          src="../../../assets//download2.jfif"
+          style="margin-left: 5px; border-radius: 2px"
+        />
+        <mat-card-title style="margin: 5px">ELECTRONICS</mat-card-title>
+      </mat-card>
+    </div>
+
+    <div style="float: left">
+      <mat-card class="example-card">
+        <img
+          mat-card-md-image
+          src="../../../assets/COY-Marsala-Accessories-Style-Look-L280.jpg"
+          style="margin-left: 5px; border-radius: 2px"
+        />
+        <mat-card-title style="margin: 5px">FOOD</mat-card-title>
+      </mat-card>
+    </div>
+    <div style="float: left">
+      <mat-card class="example-card">
+        <img
+          mat-card-md-image
+          src="../../../assets/all-fmcg-grocery-products-500x5003.jpg"
+          style="margin-left: 5px; border-radius: 2px"
+        />
+        <mat-card-title style="margin: 5px">FASHION</mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card" id="card12">
+    <ng-container *ngFor="let item of products">
+      <mat-card class="example-card2" id="card123">
+        <strong> {{ item.category }}</strong>
+        <p><img mat-card-xl-image src="{{ item.image }}" id="cart-image" /><br /></p>
+
+        <mat-card-title style="font-size: 15px;height: 40px; margin: 5px;overflow: hidden;" >
+          {{ item.title }}
+        </mat-card-title>
+        <strong>discription:</strong>
+        <mat-card-content>
+          <p class="description">{{ item.description }}</p>
+
+        </mat-card-content>
+
+
+        <p>price:${{ item.price }}</p>
+        <button mat-button> <i class="fas fa-star">{{item.rating.rate }}</i> </button>
+        <button mat-button>sell:{{ item.rating.count }}</button>
+
+        <button mat-button id="btn" (click)="addTOcart(item)">ADD TO CART</button>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>

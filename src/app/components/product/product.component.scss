@@ -1,0 +1,47 @@
+.example-card {
+  max-width: 200px;
+  margin: 13px;
+  float: left;
+}
+img:hover{
+ padding-left: 5px;
+ transition: .3s ease-in-out;
+ transform: scale(1.1);
+}
+.example-card2 {
+  max-width: 250px;
+  margin: 2px;
+  overflow: hidden;
+}
+#card12{
+  margin:10px;
+}
+#card123{
+  float: left;
+  height: 400px;
+}
+
+#btn{
+  background-color: #238ae6;
+  border-bottom: rgba(0,0,0,0.2);
+}
+#cart-image{
+  width: 100px;
+  height: 75px;
+  margin: auto;
+
+}
+.title{
+  height: 50px;
+  overflow: hidden;
+ // font-weight: 10px;
+}
+.description{
+  margin: 5px;
+ width: 200px;
+ height: 100px;
+ overflow: hidden;
+}
+.pro_title{
+font-size: 10px;
+}
